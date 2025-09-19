@@ -63,8 +63,7 @@ symptom_keywords = {
     "exercise": ["exercise", "workout", "fitness", "run", "yoga"],
     "first_aid": ["cut", "burn", "injury", "bleeding", "wound"]
 }
-
-# Intent detection
+#greetings
 def get_intent(user_input):
     doc = nlp(user_input.lower())
     tokens = [token.text for token in doc]
@@ -82,7 +81,6 @@ def get_intent(user_input):
 
     return "default"
 
-# Chat loop
 def chatbot():
     print("🤖 HealthBot: Hello! I'm your offline health assistant. Type 'quit' to exit.")
     while True:
